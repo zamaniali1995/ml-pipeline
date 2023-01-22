@@ -4,7 +4,7 @@ Complete me
 import os
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
-from typing import List, Text
+from typing import Dict, List, Text
 
 import pandas as pd
 import yaml
@@ -34,3 +34,14 @@ def parse_arguments(arguments_list: List) -> Namespace:
         help='Path to the main config path.'
     )
     return parser.parse_args(arguments_list)
+
+
+def load_yaml_config(path: Path) -> Dict:
+    """Complete me
+    """
+    with open(path, 'r') as stream:
+        try:
+            yaml_file = yaml.safe_load(stream)
+        except yaml.YAMLError as exc:
+            print(exc)
+    return yaml_file
