@@ -3,13 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - mlflow=1.14.1
-  - ipython=7.21.0
-  - notebook=6.2.0
-  - jupyterlab=3.0.10
-  - matplotlib=3.3.4
-  - pandas=1.2.3
-  - git=2.30.2
-  - pip=20.3.3
+  - mlflow==1.14.1
+  - ipython==7.21.0
+  - notebook==6.2.0
+  - jupyterlab==3.0.10
+  - matplotlib==3.3.4
+  - pandas==1.2.3
+  - git==2.30.2
+  - pip==20.3.3
   - pip:
-      - wandb==0.10.31
+      - scikit-learn==1.2.0
+      - pyarrow==10.0.1
+        - pre-commit==2.15.0
