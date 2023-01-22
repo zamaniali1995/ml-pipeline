@@ -27,7 +27,7 @@ def main(arguments_list: List = None):
     config = load_yaml_config(arguments.config_path)
     main_config = load_yaml_config(arguments.main_config_path)
     dataset_df = load_data()
-    write_parquet(df=dataset_df, path=config.get('output_data_path'))
+    write_parquet(df=dataset_df, path=main_config.get('raw_data_path'))
 
 
 if __name__ == '__main__':
