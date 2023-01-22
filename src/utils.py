@@ -8,7 +8,6 @@ from typing import Dict, List, Text
 
 import pandas as pd
 import yaml
-from yaml.loader import SafeLoader
 
 
 def write_parquet(df: pd.DataFrame, path: Path, engine: Text = 'pyarrow'):
@@ -45,3 +44,9 @@ def load_yaml_config(path: Path) -> Dict:
         except yaml.YAMLError as exc:
             print(exc)
     return yaml_file
+
+
+def load_parquet(path: Path, engine='pyarrow') -> pd.DataFrame:
+    """Complete me
+    """
+    return pd.read_parquet(path, engine=engine)
