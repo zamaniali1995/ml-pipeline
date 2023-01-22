@@ -1,0 +1,3 @@
+raw_data_path: 'data/raw_data/dataset.parquet'
+processed_train_data_path: 'data/processed_data/train.parquet'
+processed_test_data_path: 'data/processed_data/test.parquet'
