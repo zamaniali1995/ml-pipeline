@@ -1,0 +1,11 @@
+# List of rules:
+# http://www.pydocstyle.org/en/stable/error_codes.html#error-codes
+# D100: Missing docstring in public module
+# D101: Missing docstring in public class
+# D102: Missing docstring in public method
+# D103: Missing docstring in public function
+# D105: Missing docstring in magic method
+# D106: Missing docstring in public nested class
+# D300: Use “””triple double quotes”””
+[pydocstyle]
+select = D100,D101,D102,D103,D105,D106,D300

@@ -1,0 +1,48 @@
+# detect-private-key: Checks for the existence of private keys.
+# detect-aws-credentials: Checks for the existence of AWS secrets that you have set up with the AWS CLI.
+# trailing-whitespace: Trims trailing whitespace.
+# double-quote-string-fixer: converts double quotes to single quotes
+# end-of-file-fixer: Makes sure files end in a newline and only a newline.
+# check-case-conflict: Check for files with names that would conflict on a
+#   case-insensitive filesystem like MacOS HFS+ or Windows FAT.
+# check-yaml: Attempts to load all yaml files to verify syntax.
+# name-tests-test: Assert that files in tests/ be tests*.py.
+# check-added-large-files: possible data files in format not captured by .gitignore
+# debug-statements: Check for debugger imports and py37+ breakpoint() calls in python source.
+# pydocstyle: verifies docstrings follow rules defined in .pydocstyle
+# autopep8: Checks and fixes errors invoked due to non-compliance with PEP8 convention
+# isort: sorts imports alphabetically and separated into sections and by type.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    - id: detect-private-key
+    - id: detect-aws-credentials
+      args: [--allow-missing-credentials] # can also specify a credentials file (see documentation for this hook)
+    - id: trailing-whitespace
+    - id: double-quote-string-fixer
+    - id: end-of-file-fixer
+    - id: check-case-conflict
+    - id: check-yaml
+    - id: name-tests-test
+      args: ['--django'] # match test*.py instead.
+    - id: check-added-large-files
+      args: ['--maxkb=2048']
+    - id: debug-statements
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.1.1
+    hooks:
+    - id: pydocstyle # follows rules defined in .pydocstyle file
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
+    hooks:
+    - id: autopep8
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.7.0
+    hooks:
+    - id: isort
+  - repo: https://github.com/hadialqattan/pycln
+    rev: v1.3.1 # Possible releases: https://github.com/hadialqattan/pycln/releases
+    hooks:
+      - id: pycln
