@@ -1,0 +1,34 @@
+models:
+  - MLPClassifier
+  - KNeighborsClassifier
+  # - SVC
+  # - GaussianProcessClassifier
+  # - ExtraTreesRegressor
+  # - RBF
+  # - DecisionTreeClassifier
+  # - RandomForestClassifier
+  # - AdaBoostClassifier
+  # - GaussianNB
+  # - QuadraticDiscriminantAnalysis
+  # - DecisionBoundaryDisplay
+
+# Hyper parameters for the model when using grid search to determine best.
+candidate_params:
+  num_features:
+    - 1
+    - 2
+    - 3
+    - 4
+  MLPClassifier:
+    activation:
+      - logistic
+      - tanh
+      - relu
+    batch_size:
+      - 10
+      - 20
+  KNeighborsClassifier:
+    n_neighbors:
+      - 2
+      - 3
+      - 5
