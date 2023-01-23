@@ -7,7 +7,7 @@ from typing import List
 import pandas as pd
 from sklearn import datasets
 
-from src.data.processing.utils import split_train_test
+from src.data.processing.utils import rank_features, split_train_test
 from src.utils import (Log, load_parquet, load_yaml_config, parse_arguments,
                        write_parquet)
 
@@ -42,6 +42,18 @@ def main(arguments_list: List = None):
         path=main_config.path.test_data_path
     )
     Log.info(main_config.log_msg.save_data_as_parquet_end_msg)
+
+    Log.info(main_config.log_msg.rank_feature_start_msg)
+    ranked_features_df = rank_features(
+        df=train_df,
+        target_column=main_config.target_column,
+        ignore_column=main_config.ignore_column
+    )
+    write_parquet(
+        df=ranked_features_df,
+        path=main_config.path.feature_score_path
+    )
+    Log.info(main_config.log_msg.rank_feature_end_msg)
 
     Log.info(main_config.log_msg.process_data_end_msg)
 
