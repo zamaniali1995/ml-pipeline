@@ -14,4 +14,6 @@ dependencies:
   - pip:
       - scikit-learn==1.2.0
       - pyarrow==10.0.1
-        - pre-commit==2.15.0
+      - pre-commit==2.15.0
+      - structlog==21.5.0
+      - munch==2.5.0
