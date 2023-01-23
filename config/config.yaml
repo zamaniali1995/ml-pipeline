@@ -7,6 +7,7 @@ path:
   raw_data_path: 'data/raw_data/dataset.parquet'
   train_data_path: 'data/processed_data/train.parquet'
   test_data_path: 'data/processed_data/test.parquet'
+  feature_score_path: 'data/features/ranked_features.parquet'
 
 log_msg:
   # Data acquisition logs
@@ -23,3 +24,5 @@ log_msg:
   split_train_test_end_msg: 'End - Splitting Data to train and test'
   save_data_as_parquet_start_msg: 'Start - Saving data as parquet'
   save_data_as_parquet_end_msg: 'End - Saving data as parquet'
+  rank_feature_start_msg: 'Start - Ranking features'
+  rank_feature_end_msg: 'End - Ranking features'
