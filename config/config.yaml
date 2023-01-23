@@ -1,0 +1,8 @@
+raw_data_path: 'data/raw_data/dataset.parquet'
+train_data_path: 'data/processed_data/train.parquet'
+test_data_path: 'data/processed_data/test.parquet'
+
+random_state: 210
+
+# Target column(s) in the dataset
+target_column: target
