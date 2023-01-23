@@ -4,3 +4,4 @@
 - [ ] Load data from Google Cloud
 - [ ] Add more methods for feature extraction
 - [ ] Add EDA
+- [ ] Add test
