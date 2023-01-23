@@ -1,16 +1,25 @@
-raw_data_path: 'data/raw_data/dataset.parquet'
-train_data_path: 'data/processed_data/train.parquet'
-test_data_path: 'data/processed_data/test.parquet'
-
 random_state: 210
 
 # Target column(s) in the dataset
 target_column: target
 
+path:
+  raw_data_path: 'data/raw_data/dataset.parquet'
+  train_data_path: 'data/processed_data/train.parquet'
+  test_data_path: 'data/processed_data/test.parquet'
+
 log_msg:
-  acquire_data_start_msg: 'Start - Acquiring Data'
-  acquire_data_end_msg: 'End - Acquiring Data'
+  # Data acquisition logs
+  acquire_data_start_msg: '-> Start - Acquiring Data <-'
+  acquire_data_end_msg: '-> End - Acquiring Data <-'
   load_dataset_start_msg: 'Start - Loading the dataset'
   load_dataset_end_msg: 'End - Loading the dataset'
   save_dataset_start_msg: 'Start - Saving the dataset'
   save_dataset_end_msg: 'End - Saving the dataset'
+  # Data processing logs
+  process_data_start_msg: '-> Start - Processing Data <-'
+  process_data_end_msg: '-> End - Processing Data <-'
+  split_train_test_start_msg: 'Start - Splitting Data to train and test'
+  split_train_test_end_msg: 'End - Splitting Data to train and test'
+  save_data_as_parquet_start_msg: 'Start - Saving data as parquet'
+  save_data_as_parquet_end_msg: 'End - Saving data as parquet'
