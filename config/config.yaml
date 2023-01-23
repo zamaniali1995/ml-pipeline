@@ -6,3 +6,11 @@ random_state: 210
 
 # Target column(s) in the dataset
 target_column: target
+
+log_msg:
+  acquire_data_start_msg: 'Start - Acquiring Data'
+  acquire_data_end_msg: 'End - Acquiring Data'
+  load_dataset_start_msg: 'Start - Loading the dataset'
+  load_dataset_end_msg: 'End - Loading the dataset'
+  save_dataset_start_msg: 'Start - Saving the dataset'
+  save_dataset_end_msg: 'End - Saving the dataset'
