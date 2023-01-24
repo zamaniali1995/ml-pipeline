@@ -1,3 +1,6 @@
+# Number of folds for selecting best hyperparameters
+num_folds: 10
+
 models:
   - MLPClassifier
   - KNeighborsClassifier
