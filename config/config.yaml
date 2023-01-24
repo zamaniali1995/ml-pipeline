@@ -8,6 +8,7 @@ path:
   train_data_path: 'data/processed_data/train.parquet'
   test_data_path: 'data/processed_data/test.parquet'
   feature_score_path: 'data/features/ranked_features.parquet'
+  trained_model_path: 'data/model/trained_model.pickle'
 
 log_msg:
   # Data acquisition logs
