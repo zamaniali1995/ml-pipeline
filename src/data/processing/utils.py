@@ -1,6 +1,6 @@
 """Complete me
 """
-from typing import List, Text
+from typing import Text
 
 import pandas as pd
 from sklearn.feature_selection import SelectKBest, f_regression
@@ -27,7 +27,6 @@ def split_train_test(
 def rank_features(
     df: pd.DataFrame,
     target_column: Text,
-    ignore_column: List
 ) -> pd.DataFrame:
     """Evaluates and ranks the input features using univariate feature regression
 
