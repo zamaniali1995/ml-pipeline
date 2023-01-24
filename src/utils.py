@@ -3,6 +3,7 @@ Complete me
 """
 import logging
 import os
+import pickle
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from typing import Dict, List, Text
@@ -62,6 +63,17 @@ def load_parquet(path: Path, engine='pyarrow') -> pd.DataFrame:
     """Complete me
     """
     return pd.read_parquet(path, engine=engine)
+
+
+def write_pickle(file, path: Path):
+    """
+    COMPLETE THIS
+
+    """
+    dir = Path(os.path.split(path)[0])
+    dir.mkdir(parents=True, exist_ok=True)
+    with open(path, 'wb') as handle:
+        pickle.dump(file, handle)
 
 
 class Log():
