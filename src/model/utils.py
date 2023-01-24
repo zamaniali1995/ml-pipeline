@@ -44,3 +44,26 @@ def tune_hyperparameter(
     best_model = best_model.fit(X_df, y_df)
 
     return best_params, best_model
+
+
+def evaluate_model(
+    model,
+    X_df: pd.DataFrame,
+    y_df: pd.DataFrame,
+    num_folds: int = 5,
+) -> pd.DataFrame:
+    """Complete me
+    """
+    metric_df = pd.DataFrame()
+    scores_list = cross_val_score(
+        model,
+        X_df,
+        y_df,
+        cv=num_folds,
+        scoring='accuracy'
+    )
+    metric_df = pd.DataFrame({
+        'accuracy': [mean(scores_list)]
+    })
+
+    return metric_df
