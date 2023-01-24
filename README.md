@@ -6,3 +6,4 @@
 - [ ] Add EDA
 - [ ] Add test
 - [ ] Model selection and hyperparameter tunning --> Ali
+- [ ] Save the best model
