@@ -5,5 +5,5 @@
 - [ ] Add more methods for feature extraction
 - [ ] Add EDA
 - [ ] Add test
-- [ ] Model selection and hyperparameter tunning --> Ali
-- [ ] Save the best model
+- [x] Model selection and hyperparameter tunning --> Ali
+- [x] Save the best model --> Ali
