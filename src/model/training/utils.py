@@ -17,7 +17,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 from src.model.utils import (evaluate_model, split_train_target,
                              tune_hyperparameter)
-from src.utils import Log, write_pickle
+from src.utils import Log, write_pickle, write_yaml
 
 
 class Model():
@@ -83,10 +83,16 @@ class Model():
                     self.best_params = best_params
                     self.best_num_features = num_feature
 
-    def save(self, path: Path) -> None:
+    def save(self, model_path: Path, config_path: Path) -> None:
         """Complete me
         """
-        write_pickle(file=self.best_model, path=path)
+        write_pickle(file=self.best_model, path=model_path)
+        model_config = {
+            'num_features': self.best_num_features,
+            'model': self.best_model,
+            'params': self.best_params
+        }
+        write_yaml(file=model_config, path=config_path)
 
 
 def get_model(model_name: Text, params: Dict = None):
