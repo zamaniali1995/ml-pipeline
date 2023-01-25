@@ -12,6 +12,7 @@ import pandas as pd
 import structlog
 import yaml
 from munch import DefaultMunch
+from yaml import dump
 
 struct_logger = structlog.getLogger(__name__)
 logging.basicConfig(
@@ -48,7 +49,7 @@ def parse_arguments(arguments_list: List) -> Namespace:
     return parser.parse_args(arguments_list)
 
 
-def load_yaml_config(path: Path) -> Dict:
+def load_yaml(path: Path) -> Dict:
     """Complete me
     """
     with open(path, 'r') as stream:
@@ -57,6 +58,13 @@ def load_yaml_config(path: Path) -> Dict:
         except yaml.YAMLError as exc:
             Log.error(exc)
     return yaml_obj
+
+
+def write_yaml(file: Dict, path: Path):
+    """Complete me
+    """
+    with Path(path).open(mode='w') as stream:
+        dump(file, stream)
 
 
 def load_parquet(path: Path, engine='pyarrow') -> pd.DataFrame:
