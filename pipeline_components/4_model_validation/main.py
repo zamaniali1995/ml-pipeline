@@ -1,5 +1,6 @@
 """
-Complete me.
+This file should implement the model validation step in the pipeline.
+It should evaluate the model performance and store the accuracy values.
 """
 from typing import List
 
