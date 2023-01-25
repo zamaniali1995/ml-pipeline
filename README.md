@@ -7,3 +7,5 @@
 - [ ] Add test
 - [x] Model selection and hyperparameter tunning --> Ali
 - [x] Save the best model --> Ali
+- [x] Save the best model trained on whole dataset --> Ali
+- [ ] Complete model evaluation
