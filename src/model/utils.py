@@ -1,10 +1,22 @@
 """Complete me
 """
 from statistics import mean
-from typing import Dict, Text
+from typing import Dict, List, Text
 
 import pandas as pd
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.gaussian_process.kernels import RBF
+from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.model_selection import GridSearchCV, cross_val_score
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+
+from src.utils import Log
 
 
 def split_train_target(
@@ -47,6 +59,25 @@ def tune_hyperparameter(
     return best_params, best_model
 
 
+def get_model(model_name: Text, params: Dict = None):
+    """
+    Get an object of a model
+
+    :param model_name: The model name
+    :param params: hyper parameters
+
+    :return: An object of a model
+    """
+    try:
+        if params != None:
+            model = eval(model_name+'(**params)')
+        else:
+            model = eval(model_name+'()')
+    except ValueError as error:
+        Log.error(error)
+    return model
+
+
 def evaluate_model(
     model,
     X_df: pd.DataFrame,
@@ -68,3 +99,13 @@ def evaluate_model(
     })
 
     return metric_df
+
+
+def select_k_feature(
+    data_df: pd.DataFrame,
+    ranked_features_list: List,
+    num_feature: int,
+) -> pd.DataFrame:
+    """Complete me
+    """
+    return data_df[ranked_features_list[:num_feature]]
