@@ -8,15 +8,15 @@ import pandas as pd
 from sklearn import datasets
 
 from src.data.processing.utils import rank_features, split_train_test
-from src.utils import (Log, load_parquet, load_yaml_config, parse_arguments,
+from src.utils import (Log, load_parquet, load_yaml, parse_arguments,
                        write_parquet)
 
 
 def main(arguments_list: List = None):
     """Main method"""
     arguments = parse_arguments(arguments_list=arguments_list)
-    config = load_yaml_config(arguments.config_path)
-    main_config = load_yaml_config(arguments.main_config_path)
+    config = load_yaml(arguments.config_path)
+    main_config = load_yaml(arguments.main_config_path)
 
     Log.info(main_config.log_msg.process_data_start_msg)
 
