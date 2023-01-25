@@ -50,7 +50,7 @@ def tune_hyperparameter(
     num_folds=5,
 ):
     """
-    Selects the best hyperparameters for a given input model using GridSearch
+    Selects the best hyper parameters for a given input model using GridSearch
 
     Parameters
     ----------
