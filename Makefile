@@ -27,3 +27,9 @@ train-model:
 	@python3 pipeline_components/3_model_training/main.py \
 		--config_path=./config/model_training/config.yaml \
 		--main_config_path=./config/config.yaml
+
+evaluate-model:
+	@echo "---- Evaluating Model ----"
+	@python3 pipeline_components/4_model_validation/main.py \
+		--config_path=./config/model_validation/config.yaml \
+		--main_config_path=./config/config.yaml
