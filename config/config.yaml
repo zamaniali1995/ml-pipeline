@@ -11,6 +11,7 @@ path:
   trained_model_path: 'data/model/trained_model.pickle'
   trained_full_model_path: 'data/model/trained_full_model.pickle'
   config_model_path: 'data/model/config_model.yaml'
+  best_params_path: 'data/model/best_params.pickle'
 
 log_msg:
   # Data acquisition logs
