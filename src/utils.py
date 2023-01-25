@@ -56,7 +56,7 @@ def load_yaml(path: Path) -> Dict:
         try:
             yaml_obj = DefaultMunch.fromDict(yaml.safe_load(stream))
         except yaml.YAMLError as exc:
-            Log.error(exc)
+            Log.error(msg=exc)
     return yaml_obj
 
 
@@ -78,17 +78,25 @@ def write_pickle(file, path: Path):
     COMPLETE THIS
 
     """
-    dir = Path(os.path.split(path)[0])
+    dir = Path(os.path.split(Path(path))[0])
     dir.mkdir(parents=True, exist_ok=True)
-    with open(path, 'wb') as handle:
+    with open(Path(path), 'wb') as handle:
         pickle.dump(file, handle)
+
+
+def load_pickle(path: Path):
+    """Complete me
+    """
+    with open(Path(path), 'rb') as f:
+        pickle_file = pickle.load(f)
+    return pickle_file
 
 
 class Log():
     """Complete me
     """
 
-    def error(self, msg: Text) -> None:
+    def error(msg: Text) -> None:
         """Logs an input error message with the logger module
 
         :param Text msg: input message with the recorded error
