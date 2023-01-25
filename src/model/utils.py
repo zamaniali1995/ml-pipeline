@@ -1,4 +1,5 @@
-"""Complete me
+"""
+This file contains all utility functions for both the model training and evaluation
 """
 from statistics import mean
 from typing import Dict, List, Text
@@ -24,13 +25,17 @@ def split_train_target(
     target_column: Text
 ) -> tuple([pd.DataFrame, pd.DataFrame]):
     """
-    Separate train and target
+    Separate the target column out from the training data
 
-    :param data_df: Data
-    :param target_column: Column to use as target
+    Parameters
+    ----------
+    data_df : pd.DataFrame
+        DataFrame containing data to be separated/split
 
-    :return X_df: Train and target dataframe
-    :return y_df: Target dataframe
+    Returns
+    -------
+    tuple [pd.DataFrame, pd.DataFrame]
+        DataFrames of the training data and the target data
     """
     X_df = data_df.drop(target_column, axis=1)
     y_df = data_df[target_column]
@@ -44,7 +49,26 @@ def tune_hyperparameter(
     candidate_params: Dict,
     num_folds=5,
 ):
-    """Complete me
+    """
+    Selects the best hyperparameters for a given input model using GridSearch
+
+    Parameters
+    ----------
+    model : Object
+        Typically an scikit-learn model or similar which requires hyper-parameter tuning
+    X_df : pd.DataFrame
+        DataFrame of the training data
+    y_df : pd.DataFrame
+        DataFrame containing the target data
+    candidate_params : Dict
+        Dictionary of possible hyperparameter ranges to search through
+    num_folds : int, optional
+        The number of folds to use during model evaluation, by default 5
+
+    Returns
+    -------
+    tuple
+        Contains the best parameters and a model trained on those best parameters
     """
     # create a grid search object
     gs = GridSearchCV(model, candidate_params,
@@ -60,13 +84,19 @@ def tune_hyperparameter(
 
 
 def get_model(model_name: Text, params: Dict = None):
-    """
-    Get an object of a model
+    """Create a model object
 
-    :param model_name: The model name
-    :param params: hyper parameters
+    Parameters
+    ----------
+    model_name : Text
+        The name of the model
+    params : Dict, optional
+        Hyper parameters for the given model, by default None
 
-    :return: An object of a model
+    Returns
+    -------
+    Model
+        A mode object with the specific name and hyper parameters
     """
     try:
         if params != None:
@@ -84,7 +114,24 @@ def evaluate_model(
     y_df: pd.DataFrame,
     num_folds: int = 5,
 ) -> pd.DataFrame:
-    """Complete me
+    """
+    Evaluates the model performance using an accuracy scoring
+
+    Parameters
+    ----------
+    model : Object
+        Model to be evaluated
+    X_df : pd.DataFrame
+        DataFrame of data without the target information
+    y_df : pd.DataFrame
+        DataFrame with the target data column 
+    num_folds : int, optional
+        The number of folds to use during model evaluation, by default 5
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame containing the performance metrics of the model
     """
     metric_df = pd.DataFrame()
     scores_list = cross_val_score(
@@ -106,6 +153,21 @@ def select_k_feature(
     ranked_features_list: List,
     num_feature: int,
 ) -> pd.DataFrame:
-    """Complete me
+    """
+    Selects the top 'k' features from the total dataset
+
+    Parameters
+    ----------
+    data_df : pd.DataFrame
+        DataFrame of the total dataset
+    ranked_features_list : List
+        List of the top ranked features 
+    num_feature : int
+        Number of features to select in the dataset
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame of the top ranked features
     """
     return data_df[ranked_features_list[:num_feature]]
