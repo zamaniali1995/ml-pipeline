@@ -1,4 +1,5 @@
-"""Complete me
+"""
+This file should contain all required utility functions for the data processing step
 """
 from typing import Text
 
@@ -11,9 +12,29 @@ def split_train_test(
     df: pd.DataFrame,
     test_size: float,
     random_state: int,
-    shuffle: bool = True,
+    shuffle: bool = True
 ) -> tuple([pd.DataFrame, pd.DataFrame]):
-    """Complete me
+    """
+    This function splits the total dataset into training and testing samples
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Dataframe of the total dataset to be split into test / train
+    
+    test_size : float
+        Value between 0-1 representing the percentage of data to use for the testing sample
+
+    random_state : int
+        Selected random seed to use for the RNG in the model
+
+    shuffle : bool
+        Whether to shuffle the data index or not, defaults to True.
+
+    Returns
+    -------
+    tuple [pd.DataFrame, pd.DataFrame]
+        Dataframes for both the training data and testing data
     """
     train_df, test_df = train_test_split(
         df,
@@ -28,12 +49,20 @@ def rank_features(
     df: pd.DataFrame,
     target_column: Text,
 ) -> pd.DataFrame:
-    """Evaluates and ranks the input features using univariate feature regression
+    """
+    Evaluates and ranks the input features using univariate feature regression
 
-    :param pd.DataFrame df: input dataframe containing all features used
-    :param Text target_column: name of target value column that we want to predict
-    :param List ignore_column: names of any columns to be ignored
-    :return pd.DataFrame: dataframe of ranked selected features
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Input dataframe containing all features used
+    target_column : Text
+        Name of target value column that we want to predict
+
+    Returns
+    -------
+    pd.DataFrame
+        Dataframe of ranked selected features
     """
     features = list(df.drop(
         [target_column],
