@@ -7,7 +7,7 @@ from typing import List, Text
 import pandas as pd
 from sklearn import datasets
 
-from src.utils import Log, load_yaml_config, parse_arguments, write_parquet
+from src.utils import Log, load_yaml, parse_arguments, write_parquet
 
 
 def load_data(target_column: Text) -> pd.DataFrame:
@@ -24,8 +24,8 @@ def load_data(target_column: Text) -> pd.DataFrame:
 def main(arguments_list: List = None):
     """Main method"""
     arguments = parse_arguments(arguments_list=arguments_list)
-    config = load_yaml_config(arguments.config_path)
-    main_config = load_yaml_config(arguments.main_config_path)
+    config = load_yaml(arguments.config_path)
+    main_config = load_yaml(arguments.main_config_path)
 
     Log.info(main_config.log_msg.acquire_data_start_msg)
 
