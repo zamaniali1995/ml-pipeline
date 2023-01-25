@@ -9,3 +9,4 @@
 - [x] Save the best model --> Ali
 - [x] Save the best model trained on whole dataset --> Ali
 - [x] Complete model evaluation --> Ali
+- [ ] Complete front-end
