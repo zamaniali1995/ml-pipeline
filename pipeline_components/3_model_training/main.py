@@ -38,7 +38,8 @@ def main(arguments_list: List = None):
     )
     model.save(
         model_path=main_config.path.trained_model_path,
-        config_path=main_config.path.config_model_path
+        config_path=main_config.path.config_model_path,
+        best_params_path=main_config.path.best_params_path
     )
     model.save_full(
         path=main_config.path.trained_full_model_path,
