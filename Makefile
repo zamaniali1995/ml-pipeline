@@ -33,3 +33,8 @@ evaluate-model:
 	@python3 pipeline_components/4_model_validation/main.py \
 		--config_path=./config/model_validation/config.yaml \
 		--main_config_path=./config/config.yaml
+
+run-server:
+	@echo "---- Running Server ----"
+	@python3 app/run.py \
+		--main_config_path=./config/config.yaml
