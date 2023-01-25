@@ -4,19 +4,9 @@ from pathlib import Path
 from typing import Dict, List, Text
 
 import pandas as pd
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
-from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.inspection import DecisionBoundaryDisplay
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
 
-from src.model.utils import (evaluate_model, split_train_target,
-                             tune_hyperparameter)
+from src.model.utils import (evaluate_model, get_model, select_k_feature,
+                             split_train_target, tune_hyperparameter)
 from src.utils import Log, write_pickle, write_yaml
 
 
@@ -79,20 +69,21 @@ class Model():
 
                 if best_metric < df_metrics['accuracy'].values[0]:
                     best_metric = df_metrics['accuracy'].values[0]
-                    self.best_model = model
+                    self.best_model = best_model
+                    self.best_model_name = model_name
                     self.best_params = best_params
                     self.best_num_features = num_feature
 
-    def save(self, model_path: Path, config_path: Path) -> None:
+    def save(self, model_path: Path, config_path: Path, best_params_path: Path) -> None:
         """Complete me
         """
         write_pickle(file=self.best_model, path=model_path)
         model_config = {
             'num_features': self.best_num_features,
-            'model': self.best_model,
-            'params': self.best_params
+            'model': self.best_model_name,
         }
         write_yaml(file=model_config, path=config_path)
+        write_pickle(file=self.best_params, path=best_params_path)
 
     def save_full(self, path: Path, test_data_df: pd.DataFrame) -> None:
         """Complete me
@@ -116,32 +107,3 @@ class Model():
 
         model_full = self.best_model.fit(X_k_feature_df, y_df)
         write_pickle(file=model_full, path=path)
-
-
-def get_model(model_name: Text, params: Dict = None):
-    """
-    Get an object of a model
-
-    :param model_name: The model name
-    :param params: hyper parameters
-
-    :return: An object of a model
-    """
-    try:
-        if params != None:
-            model = eval(model_name+'(**params)')
-        else:
-            model = eval(model_name+'()')
-    except ValueError as error:
-        Log.error(error)
-    return model
-
-
-def select_k_feature(
-    data_df: pd.DataFrame,
-    ranked_features_list: List,
-    num_feature: int,
-) -> pd.DataFrame:
-    """Complete me
-    """
-    return data_df[ranked_features_list[:num_feature]]
