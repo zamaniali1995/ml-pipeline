@@ -11,9 +11,9 @@ from src.utils import Log, write_pickle, write_yaml
 
 
 class Model():
-    """Model evaluation
     """
-
+    A class to describe a model object
+    """
     def __init__(
         self,
         models: List,
@@ -22,7 +22,21 @@ class Model():
         train_data_df: pd.DataFrame,
         target_column: Text,
     ) -> None:
-        """Complete me
+        """
+        Constructor for the model class
+
+        Parameters
+        ----------
+        models : List
+            List of models that will be used and compared
+        candidate_params : Dict
+            Dictionary of potential parameters for the models to try
+        ranked_features_df : pd.DataFrame
+            Dataframe of the ranked features
+        train_data_df : pd.DataFrame
+            Dataframe containing the training data portion of the total data
+        target_column : Text
+            Dataframe containing the target data for the models 
         """
         self.models_name = models
         self.candidate_params = candidate_params
@@ -34,7 +48,14 @@ class Model():
         self,
         num_folds: int = 5,
     ) -> None:
-        """Complete me
+        """
+        Selects the best model from all of the models after training, 
+        evaluating, and comparing the results.
+
+        Parameters
+        ----------
+        num_folds : int, optional
+            The number of folds to use during model evaluation, by default 5
         """
         best_metric = 0
         X_train_df, y_train_df = split_train_target(
@@ -75,7 +96,17 @@ class Model():
                     self.best_num_features = num_feature
 
     def save(self, model_path: Path, config_path: Path, best_params_path: Path) -> None:
-        """Complete me
+        """
+        Saves a model with its best parameters after is is trained and has been scored
+
+        Parameters
+        ----------
+        model_path : Path
+            Path to save the model
+        config_path : Path
+            Path to the configuration file for model training
+        best_params_path : Path
+            Path to store the best parameters for the models
         """
         write_pickle(file=self.best_model, path=model_path)
         model_config = {
@@ -86,7 +117,15 @@ class Model():
         write_pickle(file=self.best_params, path=best_params_path)
 
     def save_full(self, path: Path, test_data_df: pd.DataFrame) -> None:
-        """Complete me
+        """
+        Saves a model after training on the full dataset
+
+        Parameters
+        ----------
+        path : Path
+            Path to save the model trained on the full dataset
+        test_data_df : pd.DataFrame
+            DataFrame of the test data to be combined with the training data
         """
         data_df = pd.concat([
             self.train_data_df,
