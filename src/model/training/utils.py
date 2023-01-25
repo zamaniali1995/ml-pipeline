@@ -94,6 +94,29 @@ class Model():
         }
         write_yaml(file=model_config, path=config_path)
 
+    def save_full(self, path: Path, test_data_df: pd.DataFrame) -> None:
+        """Complete me
+        """
+        data_df = pd.concat([
+            self.train_data_df,
+            test_data_df
+        ])
+
+        X_df, y_df = split_train_target(
+            data_df=data_df,
+            target_column=self.target_column
+        )
+
+        X_k_feature_df = select_k_feature(
+            data_df=X_df,
+            num_feature=self.best_num_features,
+            ranked_features_list=list(
+                self.ranked_features_df['feature'])
+        )
+
+        model_full = self.best_model.fit(X_k_feature_df, y_df)
+        write_pickle(file=model_full, path=path)
+
 
 def get_model(model_name: Text, params: Dict = None):
     """
