@@ -9,6 +9,8 @@ path:
   test_data_path: 'data/processed_data/test.parquet'
   feature_score_path: 'data/features/ranked_features.parquet'
   trained_model_path: 'data/model/trained_model.pickle'
+  trained_full_model_path: 'data/model/trained_full_model.pickle'
+  config_model_path: 'data/model/config_model.yaml'
 
 log_msg:
   # Data acquisition logs
