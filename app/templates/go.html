@@ -3,6 +3,21 @@
 
 {% block message %}
     <hr />
-    <h4 class="text-center">Results</h4>
-    <p class="text-center"><i>{{classification_result}}</i></p>
+    <h4 class="text-center">Result</h4>
+    <p class="text-center"><i style="font-weight: bold;">{{classification_result}}</i></p>
+    {% if classification_result=='Iris Setosa' %}
+        <div class="text-center">
+            <img src="{{url_for('static', filename='img/iris_setosa.jpeg')}}" alt="Iris Setosa", width="500", height="500">
+        </div>
+    {% elif classification_result=='Iris Versicolour' %}
+        <div>
+            <img src="{{url_for('static', filename='img/iris_versicolor.jpeg')}}" alt="Iris Versicolour", width="500", height="500">
+        </div>
+    {% elif classification_result=='Iris Virginica' %}
+        <div class="text-center">
+            <img src="{{url_for('static', filename='img/iris_virginica.jpeg')}}" alt="Iris Virginica", width="500", height="500">
+        </div>
+    {% else %}
+        {{ super() }}
+    {% endif %}
 {% endblock %}
