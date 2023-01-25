@@ -18,3 +18,4 @@ dependencies:
       - structlog==21.5.0
       - munch==2.5.0
       - flask==2.2.2
+      - dtale==2.11.0
