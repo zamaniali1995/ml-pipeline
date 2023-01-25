@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ml-pipeline template</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Ml-Pipeline Framework</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://zamaniali1995.github.io/">Ali Contact</a></li>
+                <li><a href="">Jacob Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Ml-Pipeline Framework</h1>
+        <p class="text-center">Iris Dataset </p>
+        <hr />
+
+        <div class="row">
+            <div class="col-lg-12 form-group-lg">
+                <form action="/go" method="get">
+                    <input type="text" class="form-control form-control-lg" name="sepal_len" placeholder="Sepal length in cm">
+                    <br>
+                    <input type="text" class="form-control form-control-lg" name="sepal_wid" placeholder="Sepal width in cm">
+                    <br>
+                    <input type="text" class="form-control form-control-lg" name="petal_len" placeholder="Petal length in cm">
+                    <br>
+                    <input type="text" class="form-control form-control-lg" name="petal_wid" placeholder="Petal width in cm">
+                    <br>
+                    <div class="col-lg-offset-5">
+                        <button type="submit" class="btn btn-lg btn-success">Classify</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {% block message %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
