@@ -1,5 +1,5 @@
 """
-Complete me
+This file should contain all required utility functions for the data acquisition step
 """
 from typing import List, Text
 
