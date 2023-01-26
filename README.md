@@ -10,4 +10,4 @@
 - [x] Save the best model trained on whole dataset --> Ali
 - [x] Complete model evaluation --> Ali
 - [x] Complete front-end --> Ali
-- [ ] Complete docstring --> Jacob
+- [x] Complete docstring --> Jacob
