@@ -10,7 +10,7 @@ create-package:
 	@echo "---- Creating a package ----"
 	@pip3 install -e .
 
-acquire-date:
+acquire-data:
 	@echo "---- Acquiring Data ----"
 	@python3 pipeline_components/1_data_acquisition/main.py \
 		--config_path=./config/data_acquisition/config.yaml \
