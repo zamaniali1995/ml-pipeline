@@ -4,7 +4,7 @@ create-env:
 
 delete-env:
 	@echo "---- Deleting Conda Env ----"
-	@conda env delete --name test-env
+	@conda env remove --name test-env
 
 create-package:
 	@echo "---- Creating a package ----"
