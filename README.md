@@ -112,7 +112,12 @@ Use the `BLANK_README.md` to get started.
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url] -->
-* Python
+![](https://img.shields.io/badge/Code-Python-informational?style=flat&logo=Python&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Package-Sklearn-informational?style=flat&logo=Sklearn&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Package-Numpy-informational?style=flat&logo=Numpy&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Package-Scipy-informational?style=flat&logo=Scipy&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Package-Pandas-informational?style=flat&logo=Pandas&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Framework-Flask-informational?style=flat&logo=Flask&logoColor=white&color=4AB197)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
