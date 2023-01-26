@@ -16,7 +16,7 @@ acquire-data:
 		--config_path=./config/data_acquisition/config.yaml \
 		--main_config_path=./config/config.yaml
 
-process-date:
+process-data:
 	@echo "---- Processing Data ----"
 	@python3 pipeline_components/2_data_processing/main.py \
 		--config_path=./config/data_processing/config.yaml \
