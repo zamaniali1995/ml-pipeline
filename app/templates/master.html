@@ -31,28 +31,39 @@
 
 
 <div class="jumbotron">
-    <div class="container">
-        <h1 class="text-center">Ml-Pipeline Framework</h1>
+    <div class="container text-center">
+        <h1 class="text-center">Ml-Pipeline Template</h1>
         <p class="text-center">Iris Dataset </p>
         <hr />
-
-        <div class="row">
-            <div class="col-lg-12 form-group-lg">
-                <form action="/go" method="get">
-                    <input type="text" class="form-control form-control-lg" name="sepal_len" placeholder="Sepal length in cm">
-                    <br>
-                    <input type="text" class="form-control form-control-lg" name="sepal_wid" placeholder="Sepal width in cm">
-                    <br>
-                    <input type="text" class="form-control form-control-lg" name="petal_len" placeholder="Petal length in cm">
-                    <br>
-                    <input type="text" class="form-control form-control-lg" name="petal_wid" placeholder="Petal width in cm">
-                    <br>
-                    <div class="col-lg-offset-5">
-                        <button type="submit" class="btn btn-lg btn-success">Classify</button>
-                    </div>
-                </form>
+        <form action="/go" method="get">
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Sepal length in cm</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control-plaintext text-center" name="sepal_len" placeholder="Sepal length" value="2">
+              </div>
             </div>
-        </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Sepal width in cm</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control-plaintext text-center"  value="3" name="sepal_wid">
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Petal length in cm</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control-plaintext text-center"  value="3" name="petal_len">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Petal width in cm</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control-plaintext text-center"  value="3" name="petal_wid">
+                </div>
+            </div>
+            <div class="col-lg-offset-0">
+                <button type="submit" class="btn btn-lg btn-success">Classify</button>
+            </div>
+        </form>
 
         {% block message %}
         {% endblock %}

@@ -47,7 +47,6 @@ def main(arguments_list: List = None):
     ranked_features_df = rank_features(
         df=train_df,
         target_column=main_config.target_column,
-        ignore_column=main_config.ignore_column
     )
     write_parquet(
         df=ranked_features_df,
