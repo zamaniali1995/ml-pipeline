@@ -137,7 +137,7 @@ The configuration files are intended to be the primary point of access and contr
       └── main.py         # Main file for model registration step (Optional)
    ```
 
-The *pipeline_components* folder in the directory is the host to the main files for each step in the pipeline flow. Here, there exist only main files for each step (ordered numerically to represent the order of runtime). These main files should not be altered unless required to implement an additional utility function or some other task. Changes made to this pipeline should remain within the utility functions in the /src/ directory and in the configuration files.
+The *pipeline_components* folder in the directory is the host to the main files for each step in the pipeline flow. Here, there exist only main files for each step (ordered numerically to represent the order of runtime). These main files should not be altered unless required to implement an additional utility function, or some other task. Changes made to this pipeline should remain within the utility functions in the /src/ directory and in the configuration files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
