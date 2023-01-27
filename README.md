@@ -92,6 +92,8 @@ Our goal with this ML pipeline template is to create a user friendly utility to 
 
 This template enables fast experimentation, easy execution, and simple debugging for all components. 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Directory Information
 ### **app/**
    ```sh
@@ -108,6 +110,8 @@ This template enables fast experimentation, easy execution, and simple debugging
       └── master.html                 # Main html file for front end
    ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### **config/**
    ```sh
   .
@@ -121,6 +125,8 @@ This template enables fast experimentation, easy execution, and simple debugging
   └── model_validation
       └── config.yaml       # Model validation configuration
    ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### **pipeline_components/**
    ```sh
@@ -136,6 +142,8 @@ This template enables fast experimentation, easy execution, and simple debugging
   └── 5_model_registration
       └── main.py         # Main file for model registration step (Optional)
    ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### **src/**
    ```sh
