@@ -85,16 +85,78 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+While developing our machine learning pipeline template, we wanted to create an efficient and purposeful environment that could resolve many of the annoyances and issues we have faced in the past.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Our goal with this ML pipeline template is to create a user friendly utility to drastically speed up the development and implementation of a machine learning model for all sorts of various problems. Many of our past experiences with other templates or machine learning projects had left us hoping for a better working environment and a more efficient process. 
 
-Use the `BLANK_README.md` to get started.
+This template enables fast experimentation, easy execution, and simple debugging for all components. 
+
+## Directory Information
+### **app/**
+   ```sh
+  .
+  ├── run.py                        # Python remote server control
+  ├── static
+  │   └── img
+  │       ├── example_image.jpg     # Example image for README
+  │       ├── iris_setosa.jpeg
+  │       ├── iris_versicolor.jpeg
+  │       └── iris_virginica.jpeg
+  └── templates
+      ├── go.html
+      └── master.html                 # Main html file for front end
+   ```
+
+### **config/**
+   ```sh
+  .
+  ├── config.yaml           # Main global configuration file 
+  ├── data_acquisition      
+  │   └── config.yaml       # Data acquisition configuration 
+  ├── data_processing
+  │   └── config.yaml       # Data processing configuration
+  ├── model_training
+  │   └── config.yaml       # Model training configuration 
+  └── model_validation
+      └── config.yaml       # Model validation configuration
+   ```
+
+### **pipeline_components/**
+   ```sh
+  .
+  ├── 1_data_acquisition
+  │   └── main.py         # Main file for data acquisition step
+  ├── 2_data_processing
+  │   └── main.py         # Main file for data processing step
+  ├── 3_model_training
+  │   └── main.py         # Main file for model training step
+  ├── 4_model_validation
+  │   └── main.py         # Main file for model validation step
+  └── 5_model_registration
+      └── main.py         # Main file for model registration step (Optional)
+   ```
+
+### **src/**
+   ```sh
+.
+├── __init__.py   
+├── data
+│   ├── __init__.py
+│   ├── acquisition     
+│   │   ├── __init__.py
+│   │   └── utils.py    # Data acquisition utility functions
+│   ├── processing
+│   │   └── utils.py    # Data processing utility functions
+│   └── utils.py        # General utility functions related to data
+├── model
+│   ├── __init__.py
+│   ├── training
+│   │   ├── __init__.py
+│   │   └── utils.py    # Data model training utility functions
+│   └── utils.py        # General utility functions related to models
+└── utils.py            # Main general utility functions
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
