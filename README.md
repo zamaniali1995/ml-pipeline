@@ -271,6 +271,7 @@ To validate that our template is working, we have included a sample dataset whic
 - [x] Implement Example Dataset and Functional Front-End
 - [ ] Add additional data processing utility functions to be available for use.
 - [ ] Implement Test-Cases to be used for validation of the different pipeline steps
+- [ ] Run the whole pipeline with one single command like run-pipeline
 - [ ] Add more ways to load data
   - [ ] AWS
   - [ ] Google Cloud
