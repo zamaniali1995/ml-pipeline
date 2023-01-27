@@ -308,7 +308,7 @@ See the [open issues](https://github.com/zamaniali1995/ml-pipeline/issues) for a
 <!-- CONTACT -->
 ## Contact
 
-Ali Zamani - [LinkedIn](https://www.linkedin.com/in/zamaniali1995/) - azamani1@ualberta.ca
+Ali Zamani - [LinkedIn](https://www.linkedin.com/in/zamaniali1995/) - zamaniali1995@gmail.com
 
 Jacob Mish - [LinkedIn](https://www.linkedin.com/in/jacob-mish-25915722a/) - JacobPMish@gmail.com
 
