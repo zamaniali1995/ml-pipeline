@@ -379,12 +379,13 @@ Use this space to list resources you find helpful and would like to give credit 
 - [ ] Load data from AWS
 - [ ] Load data from Google Cloud
 - [ ] Add more methods for feature extraction
-- [x] Add EDA --> Ali
+- [x] Add EDA -> Ali
 - [ ] Add test
-- [x] Model selection and hyperparameter tunning --> Ali
-- [x] Save the best model --> Ali
-- [x] Save the best model trained on whole dataset --> Ali
-- [x] Complete model evaluation --> Ali
-- [x] Complete front-end --> Ali
-- [x] Complete docstring --> Jacob
-- [ ] Complete Read.ME --> Jacob -->
+- [x] Model selection and hyperparameter tunning -> Ali
+- [x] Save the best model -> Ali
+- [x] Save the best model trained on whole dataset -> Ali
+- [x] Complete model evaluation -> Ali
+- [x] Complete front-end -> Ali
+- [x] Complete docstring -> Jacob
+- [ ] Complete Read.ME -> Jacob -->
+
