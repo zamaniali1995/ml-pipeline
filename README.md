@@ -270,15 +270,16 @@ To validate that our template is working, we have included a sample dataset whic
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Develop Base Pipeline Template
+- [x] Implement Example Dataset and Functional Front-End
+- [ ] Add additional data processing utility functions to be available for use.
+- [ ] Implement Test-Cases to be used for validation of the different pipeline steps
+- [ ] Add more ways to load data
+  - [ ] AWS
+  - [ ] Google Cloud
+  - [ ] Microsoft Azure
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/zamaniali1995/ml-pipeline/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -373,7 +374,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-# Tasks
+<!-- # Tasks
 - [ ] Load data from Azure
 - [ ] Load data from AWS
 - [ ] Load data from Google Cloud
@@ -386,4 +387,4 @@ Use this space to list resources you find helpful and would like to give credit 
 - [x] Complete model evaluation --> Ali
 - [x] Complete front-end --> Ali
 - [x] Complete docstring --> Jacob
-- [ ] Complete Read.ME --> Jacob
+- [ ] Complete Read.ME --> Jacob -->
