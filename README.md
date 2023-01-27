@@ -58,9 +58,15 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+    <li><a href="#directory-information">Directory Information</a></li>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#app">App</a></li>
+        <li><a href="#config">Config</a></li>
+        <li><a href="#pipeline-components">Pipeline Components</a></li>
+        <li><a href="#src">Src</a></li>
       </ul>
+    </li>
+    <li><a href="#built-with">Built With</a></li>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
