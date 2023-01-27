@@ -42,7 +42,7 @@
     <a href="https://github.com/zamaniali1995/ml-pipeline"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo (TO BE COMPLETED)</a>
+    <a href="https://zamaniali1995.pythonanywhere.com/">View Demo</a>
     ·
     <a href="https://github.com/zamaniali1995/ml-pipeline/issues">Report Bug</a>
     ·
