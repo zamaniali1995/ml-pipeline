@@ -212,6 +212,7 @@ The *src* component of the directory is the core of our pipelines functionality.
 ![](https://img.shields.io/badge/Package-Scipy-informational?style=flat&logo=Scipy&logoColor=white&color=4AB197)
 ![](https://img.shields.io/badge/Package-Pandas-informational?style=flat&logo=Pandas&logoColor=white&color=4AB197)
 ![](https://img.shields.io/badge/Framework-Flask-informational?style=flat&logo=Flask&logoColor=white&color=4AB197)
+![](https://img.shields.io/badge/Style-HTML-informational?style=flat&logo=Html&logoColor=white&color=4AB197)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
