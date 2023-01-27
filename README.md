@@ -37,7 +37,7 @@
   <h3 align="center">Machine Learning Pipeline Template</h3>
 
   <p align="center">
-    A useful template to utilize for simple and efficient machine learning projects
+    A useful template to enable simple and efficient machine learning projects
     <br />
     <a href="https://github.com/zamaniali1995/ml-pipeline"><strong>Explore the docs »</strong></a>
     <br />
