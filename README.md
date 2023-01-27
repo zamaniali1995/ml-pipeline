@@ -110,6 +110,9 @@ This template enables fast experimentation, easy execution, and simple debugging
       └── master.html                 # Main html file for front end
    ```
 
+The *app* component of the directory controls the front end flask service which produces the user-friendly environment for interacting with the model.
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### **config/**
@@ -125,6 +128,17 @@ This template enables fast experimentation, easy execution, and simple debugging
   └── model_validation
       └── config.yaml       # Model validation configuration
    ```
+
+The *config* component of the directory is where the most controls reside for this pipeline template. There is a config file for each of the main sections:
+
+* **Data Acquisition**
+* **Data Processing**
+* **Model Training**
+* **Model Validation**
+
+There is also an additional configuration file for general settings that relate to each of these different sections and are shared. 
+
+The configuration files are intended to be the primary point of access and control for this pipeline. Any changes or utility additions should be controlled from their corresponding configuration file in order to keep an organized and properly modularized codebase.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,6 +156,8 @@ This template enables fast experimentation, easy execution, and simple debugging
   └── 5_model_registration
       └── main.py         # Main file for model registration step (Optional)
    ```
+
+The *pipeline_components* folder in the directory is the host to the main files for each step in the pipeline flow. Here there exist only main files for each step (ordered numerically to represent the order of runtime). These main files should not be altered unless required to implement an additional utility function or some other task. Changes made to this pipeline should remain within the utility functions in the /src/ directory and in the configuration files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,6 +181,8 @@ This template enables fast experimentation, easy execution, and simple debugging
 │   └── utils.py        # General utility functions related to models
 └── utils.py            # Main general utility functions
    ```
+
+The *src* component of the directory is the core of our pipelines functionality. This directory stores the utility functions for each of the pipeline steps. When running the pipeline, these utility functions will be built as a package and can be imported and used in the main functions during runtime. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -236,7 +254,7 @@ These configuration files allow for changes to be made in one place, not requiri
 If there is a desire to implement some additional processing method or some specific functionality for a given dataset, we have created an simple process to add utility functions that can be used and connected with the configuration files easily.
 
 
-### Running Each Step
+### **Running Each Step**
 
 To validate that our template is working, we have included a sample dataset which can be used to run each component of the pipeline and which will produce a useable front-end local server. If everything is working as intended, the following steps should be able to produce a functioning predictor.
 
