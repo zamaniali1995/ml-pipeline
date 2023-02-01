@@ -1,4 +1,4 @@
-name: test-env
+name: ml-env
 channels:
   - conda-forge
   - defaults

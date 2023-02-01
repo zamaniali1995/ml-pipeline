@@ -206,7 +206,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 3. Activate the newly created conda environment
    ```make
-   conda activate test-env
+   conda activate ml-env
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
